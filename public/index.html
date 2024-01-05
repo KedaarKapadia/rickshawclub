@@ -39,25 +39,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script>
-      // Function to generate a random color
-      function getRandomColor() {
-        return '#' + Math.floor(Math.random() * 16777215).toString(16);
-      }
-
-      // Function to set the random color to the SVG
-      function setRandomColor() {
-        const svg = document.getElementById('randomColorSvg');
-        const randomColor = getRandomColor();
-        svg.querySelector('circle').setAttribute('fill', randomColor);
-      }
-
-      // Call the function after the React component is mounted
-      document.addEventListener('DOMContentLoaded', function () {
-        setRandomColor();
-      });
-    </script>
-
 <svg viewBox="0 0 432 530" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
   <defs>
     <linearGradient gradientUnits="userSpaceOnUse" x1="213.15" y1="112.514" x2="213.15" y2="258.31" id="gradient-0" gradientTransform="matrix(0.873777, -0.486327, 0.463396, 0.832576, -78.472979, 106.718115)">
@@ -83,7 +64,7 @@
     <g id="front">
       <path id="wheelRight" class="cls-12" d="M338.02 392.79h17.84c12.13 0 21.95 2.46 21.95 5.49v87.82c0 3.03-9.83 5.49-21.95 5.49h-17.84c-12.13 0-21.95-2.46-21.95-5.49v-87.82c0-3.03 9.83-5.49 21.95-5.49Z" style="fill: rgb(0, 0, 0);"/>
       <path id="wheeLeft" class="cls-12" d="M70.45 392.79h17.84c12.13 0 21.95 2.46 21.95 5.49v87.82c0 3.03-9.83 5.49-21.95 5.49H70.45c-12.13 0-21.95-2.46-21.95-5.49v-87.82c0-3.03 9.83-5.49 21.95-5.49Z" style="fill: rgb(0, 0, 0);"/>
-      <path id="body" d="M92.41 96.4h241.5c24.25 0 43.91 86.01 43.91 192.1h0c0 106.09-19.66 192.1-43.91 192.1H92.41c-24.25 0-43.91-86.01-43.91-192.1h0c0-106.09 19.66-192.1 43.91-192.1Z" style="fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: bevel; stroke-width: 7.2px; paint-order: stroke; fill: #000000;"/>
+      <path id="body" d="M92.41 96.4h241.5c24.25 0 43.91 86.01 43.91 192.1h0c0 106.09-19.66 192.1-43.91 192.1H92.41c-24.25 0-43.91-86.01-43.91-192.1h0c0-106.09 19.66-192.1 43.91-192.1Z" style="fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: bevel; stroke-width: 7.2px; paint-order: stroke;"/>
       <path id="bodySplit" d="M48.57 283.01h329.25" style="fill-rule:evenodd;stroke:#000;stroke-linecap:round;stroke-linejoin:bevel;stroke-width:7.2px"/>
       <path id="windshield" d="M114.36 112.95c-41.71-1.03-43.91 87.93-43.91 123 0 15.87 11.31 22.36 21.95 22.36 84.16-.38 156.67 0 241.5 0 10.64 0 21.95-6.57 21.95-22.36-.09-23.58-2.2-121.9-43.91-123-56.66-1.5-137.84 1.47-197.59 0h0Z" style="fill-rule: evenodd; stroke-linecap: round; stroke-linejoin: bevel; stroke-width: 7.2px; fill: url('#gradient-0'); stroke: url('#gradient-2');"/>
       <path id="indicator2" class="cls-8" d="M114.09 304.97h.55c12.13 0 21.95 2.46 21.95 5.49v10.98c0 3.03-9.83 5.49-21.95 5.49h-.55c-12.13 0-21.95-2.46-21.95-5.49v-10.98c0-3.03 9.83-5.49 21.95-5.49Z" style="paint-order: stroke; fill: rgb(255, 213, 0);"/>
@@ -104,5 +85,18 @@
     <title>392115-PCGU7C-412-removebg-preview</title>
   </image>
 </svg>
+<script>
+  // Function to generate a random color
+  function getRandomColor() {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  }
+
+  // Set a variable with a random color
+  const randomColorValue = getRandomColor();
+
+  // Set the fill attribute of the SVG element to the variable
+  document.getElementById('body').style.fill = randomColorValue;
+</script>
+
   </body>
 </html>
